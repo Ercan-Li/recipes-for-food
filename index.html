@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Recipes for Food</title>
+  <meta name="description" content="Recipes for Food is a cookbook featuring recipes from designers and artists">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="fonts/stylesheet.css" rel="stylesheet">
+  <link href="main.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="layout">
+    <div class="postcard-container">
+      <div class="postcard-images" id="postcard-images">
+        <img class="active" src="images/postcards-hires.jpg">
+        <img src="images/postcards-hires2.jpg">
+        <img src="images/postcards-hires3.jpg">
+        <img src="images/postcards-hires4.jpg">
+        <img src="images/postcards-hires5.jpg">
+        <img src="images/postcards-hires6.jpg">
+        <img src="images/postcards-hires7.jpg">
+        <img src="images/postcards-hires8.jpg">
+        <img src="images/postcards-hires9.jpg">
+      </div>
+    </div>
+    <div class="content">
+      <h1>Recipes for Food</h1>
+      <p>
+        Edited by Nazli Ercan and Eric Li<br />
+        We are looking for recipes! Please submit one via email.
+      </p>
+      <div class="sticker">
+        <div class="sticker-text">Coming Soon!</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let activeIndex = 0;
+    const images = document.querySelectorAll('.postcard-images img');
+    let imageTimeout = null;
+
+    document.getElementById('postcard-images').addEventListener('click', () => {
+      clearTimeout(imageTimeout);
+      advanceSlideshow();
+      runImageSlideshow();
+    });
+
+    const advanceSlideshow = () => {
+      images[activeIndex].classList.remove('active');
+      activeIndex = (activeIndex + 1) % images.length;
+      images[activeIndex].classList.add('active');
+    };
+
+    const runImageSlideshow = () => {
+      imageTimeout = setTimeout(() => {
+        advanceSlideshow();
+        runImageSlideshow();
+      }, 5000);
+    };
+
+    runImageSlideshow();
+  </script>
+</body>
+</html>

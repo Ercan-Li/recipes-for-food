@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'Century Schoolbook';
+    src: url('CenturySchL-BoldItal.woff2') format('woff2'),
+        url('CenturySchL-BoldItal.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Century Schoolbook';
+    src: url('CenturySchL-Roma.woff2') format('woff2'),
+        url('CenturySchL-Roma.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Century Schoolbook';
+    src: url('CenturySchL-Bold.woff2') format('woff2'),
+        url('CenturySchL-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Century Schoolbook';
+    src: url('CenturySchL-Ital.woff2') format('woff2'),
+        url('CenturySchL-Ital.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Century Schoolbook Mono';
+    src: url('CenturySchoolbookBT-Monospace.woff2') format('woff2'),
+        url('CenturySchoolbookBT-Monospace.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
