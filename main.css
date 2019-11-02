@@ -26,6 +26,12 @@ h1 {
   position: relative;
 }
 
+a {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1.5px solid #fff;
+}
+
 .layout {
   margin-left: auto;
   margin-right: auto;
