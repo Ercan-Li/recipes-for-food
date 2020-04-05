@@ -17,12 +17,12 @@
     <?php foreach ($site->index()->template('recipe')->listed() as $recipe): ?>
       <li class="menu__item">
         <?php
-          $activeClass = '';
+          $active = '';
           if ($page->slug() == $recipe->slug()) {
-            $activeClass = 'active';
+            $active = 'active';
           }
         ?>
-        <a class="menu__item__link <?= $activeClass; ?>" href="<?= $recipe->url(); ?>">
+        <a class="menu__item__link <?= $active; ?>" href="<?= $recipe->url(); ?>#active" id="<?= $activeId; ?>">
           <p><b><?= $recipe->title(); ?></b></p>
           <p><?= $recipe->author(); ?></p>
         </a>
