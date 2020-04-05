@@ -134,7 +134,9 @@ a:hover {
   border-top: var(--border);
   position: sticky;
   bottom: 0;
+}
 
+.menu__footer__contents {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

@@ -28,9 +28,11 @@
       </li>
     <?php endforeach; ?>
   </ul>
-  <ul class="menu__footer">
-    <?php foreach ($site->pages()->listed() as $additionalPage): ?>
-      <li class="menu__footer__item"><a href="<?= $additionalPage->url(); ?>"><?= $additionalPage->title(); ?></a></li>
-    <?php endforeach; ?>
-  </ul>
+  <div class="menu__footer">
+    <ul class="menu__footer__contents">
+      <?php foreach ($site->pages()->listed() as $additionalPage): ?>
+        <li class="menu__footer__item"><a href="<?= $additionalPage->url(); ?>"><?= $additionalPage->title(); ?></a></li>
+      <?php endforeach; ?>
+    </ul>
+  </div>
 </div>
