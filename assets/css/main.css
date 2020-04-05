@@ -186,24 +186,6 @@ a:hover {
   padding-right: 4em;
 }
 
-.text h1 {
-  font-size: calc(var(--font-size) * var(--font-size-xl));
-  font-weight: 500;
-  margin-top: 1.5em;
-  margin-bottom: 0.5em;
-  font-family: var(--font-family);
-  line-height: 1;
-}
-
-.text h2 {
-  font-size: calc(var(--font-size) * var(--font-size-l));
-  font-weight: 500;
-  margin-top: 1em;
-  margin-bottom: 0.5em;
-  font-family: var(--font-family);
-  line-height: 1;
-}
-
 .text > *:first-child {
   margin-top: 0;
 }
@@ -286,4 +268,34 @@ a:hover {
   .content {
     width: 100%;
   }
+}
+
+@media print {
+  .menu, .menu--mobile, #print {
+    display: none;
+  }
+
+  .layout-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: initial;
+
+    border-style: dotted;
+    border-color: #000;
+    border-width: .0625in;
+  }
+
+  .layout-wrapper__child {
+    position: initial;
+    height: initial;
+  }
+
+  .text {
+    max-width: initial;
+  }
+
+  .content {
+    width: initial;
+  }
+
 }
