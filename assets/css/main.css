@@ -173,8 +173,11 @@ a:hover {
 }
 
 .text li, .text li p {
-  margin-left: 1em;
-  text-indent: -1em;
+  text-indent: 1em;
+}
+
+.text li:first-line, .text li p:first-line {
+  text-indent: initial;
 }
 
 .text hr {
