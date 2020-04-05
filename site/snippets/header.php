@@ -5,16 +5,30 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="white">
+  <meta name="apple-mobile-web-app-title" content="<?= $site->title(); ?>">
+
+  <link rel="apple-touch-icon" href="/assets/icons/apple-icon-01.png">
+  <link rel="icon" href="/assets/icons/favicon-01.png" >
+  <meta property="og:image" content="/assets/icons/og-image-01.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+
   <?php
     $title = $page->title();
   ?>
 
   <?php if ($title == "Home"): ?>
     <title><?= $site->title() ?></title>
+    <meta property="og:title" content="<?= $site->title() ?>">
     <meta name="description" content="<?= $site->meta_description()->excerpt(200); ?>">
+    <meta property="og:description" content="<?= $site->meta_description()->excerpt(200); ?>">
   <?php else: ?>
-    <title><?= $title ?> | <?= $site->title() ?></title>
+    <title><?= $title; ?> | <?= $site->title(); ?></title>
+    <meta property="og:title" content="<?= $title; ?> | <?= $site->title(); ?>">
     <meta name="description" content="<?= $page->main_content()->excerpt(200); ?>">
+    <meta property="og:description" content="<?= $page->main_content()->excerpt(200); ?>">
   <?php endif; ?>
 
   <?= css(['assets/css/fonts/stylesheet.css', 'assets/css/main.css', '@auto']);?>

@@ -9,7 +9,7 @@
 <div class="menu layout-wrapper__child">
   <div class="menu__header">
     <div class="menu__toggle">
-      <a href="javascript:void(0);">Recipes</a>
+      <a href="javascript:void(0);">Close</a>
     </div>
     <a href="/"><b><?= $site->title(); ?></b></a>
   </div>
