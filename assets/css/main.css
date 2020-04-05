@@ -260,7 +260,7 @@ a:hover {
   .menu {
     display: none;
     width: 100%;
-    /* height: 100vh; */
+    height: initial;
     position: fixed;
     top: 0;
     left: 0;
@@ -281,9 +281,6 @@ a:hover {
 
   .menu--mobile {
     display: initial;
-  }
-  .menu__footer {
-    /* position: initial; */
   }
 
   .content {
