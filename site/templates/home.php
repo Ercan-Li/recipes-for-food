@@ -9,7 +9,7 @@
       <b>Featured Recipes</b>
       <ul>
       <?php foreach($page->featured_recipes()->toPages() as $recipe): ?>
-        <li><a href="<?= $recipe->url(); ?>"><?= $recipe->author(); ?>, <em><?= $recipe->title(); ?></em></a></li>
+        <li><a href="<?= $recipe->url(); ?>"><?= $recipe->author(); ?>, <?= $recipe->title(); ?></a></li>
       <?php endforeach; ?>
     </ul>
     </p>
