@@ -5,8 +5,8 @@
   --line-height: 1.25;
   --line-height-em: 1.25em;
 
-  --margin: 3.0rem;
-  --margin--mobile: 2.0rem;
+  --margin: 2.5rem;
+  --margin--mobile: 1.5rem;
 
   --font-family: 'Century Schoolbook', serif;
 
@@ -181,9 +181,13 @@ a:hover {
   margin-top: -1em;
 }
 
-.text ul li {
+.text ul, .text ol {
   padding-left: 1em;
   text-indent: -1em;
+}
+
+.text ol {
+  list-style-position: inside;
 }
 
 .text hr {
