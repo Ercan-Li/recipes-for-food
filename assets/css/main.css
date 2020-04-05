@@ -11,7 +11,7 @@
   --font-family: 'Century Schoolbook', serif;
 
   --menu-width: 20vw;
-  --content-max-width: 800px;
+  --width-constrained-max-width: 800px;
   --border: 1px solid #000;
 }
 
@@ -55,6 +55,10 @@ a {
 
 a:hover {
   text-decoration: none;
+}
+
+.width-constrained {
+  max-width: var(--width-constrained-max-width);
 }
 
 /* LAYOUT */
@@ -167,7 +171,6 @@ a:hover {
 
 /* KirbyText */
 .text {
-  max-width: var(--content-max-width);
 }
 
 .text p,
@@ -218,6 +221,23 @@ a:hover {
 .text img {
   display: block;
   width: 100%;
+}
+
+.images:not(:first-child) {
+  margin-top: 1em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: var(--margin);
+  grid-row-gap: var(--margin);
+}
+
+.images.single {
+  grid-template-columns: 1fr;
+}
+
+.images__image__caption {
+  margin-top: 1em;
+  font-size: .85em;
 }
 
 @media screen and (max-width: 1333px) {
@@ -292,7 +312,7 @@ a:hover {
 }
 
 @media print {
-  .menu, .menu--mobile, #print {
+  .menu, .menu--mobile, #print, img {
     display: none;
   }
 
@@ -311,7 +331,7 @@ a:hover {
     height: initial;
   }
 
-  .text {
+  .width-constrained {
     max-width: initial;
   }
 

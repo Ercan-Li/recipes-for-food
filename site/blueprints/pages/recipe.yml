@@ -18,6 +18,10 @@ tabs:
           tags:
             label: Tags
             type: tags
+          recipe_images:
+            label: Images
+            type: files
+            layout: cards
       content:
         width: 2/3
         fields:
