@@ -11,7 +11,7 @@
     <?php foreach($page->recipe_images()->toFiles() as $image): ?>
       <li class="images__image">
         <a href="<?= $image->url(); ?>" target="_blank">
-          <img src="<?= $image->resize(800)->url(); ?>">
+          <img src="<?= $image->resize(800)->url(); ?>" loading="lazy">
         </a>
         <?php if ($image->caption()->isNotEmpty()): ?>
           <div class="images__image__caption">
