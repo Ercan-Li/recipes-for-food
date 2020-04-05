@@ -1,5 +1,0 @@
-Title: Error
-
-----
-
-Main-content: Sorry, you're lost. Please go (link: / text: home).
