@@ -22,7 +22,7 @@
             $active = 'active';
           }
         ?>
-        <a class="menu__item__link <?= $active; ?>" href="<?= $recipe->url(); ?>#active" id="<?= $activeId; ?>">
+        <a class="menu__item__link <?= $active; ?>" href="<?= $recipe->url(); ?>#active" id="<?= $active; ?>">
           <p><b><?= $recipe->title(); ?></b></p>
           <p><?= $recipe->author(); ?></p>
         </a>
