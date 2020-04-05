@@ -168,7 +168,7 @@ a:hover {
   margin-bottom: 1em;
 }
 
-.text p + .text ul, .text p + .text ol {
+.text p + ul, .text p + ol {
   margin-top: -1em;
 }
 
