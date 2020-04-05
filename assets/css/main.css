@@ -168,6 +168,10 @@ a:hover {
   margin-bottom: 1em;
 }
 
+.text p + .text ul, .text p + .text ol {
+  margin-top: -1em;
+}
+
 .text li, .text li p {
   margin-left: 1em;
   text-indent: -1em;
@@ -188,6 +192,10 @@ a:hover {
 
 .text > *:first-child {
   margin-top: 0;
+}
+
+.text > *:last-child {
+  margin-bottom: 0;
 }
 
 .text a {
