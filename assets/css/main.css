@@ -181,13 +181,13 @@ a:hover {
   margin-top: -1em;
 }
 
-.text ul, .text ol {
+.text ul {
   padding-left: 1em;
   text-indent: -1em;
 }
 
 .text ol {
-  list-style-position: inside;
+  margin-left: 1em;
 }
 
 .text hr {
