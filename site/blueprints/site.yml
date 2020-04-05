@@ -56,9 +56,9 @@ tabs:
           meta_description:
             label: Site Meta Description
             type: text
-      settings_2:
-        width: 1/2
-        fields:
-          footer
-            label: Footer
-            type: textarea
+      # settings_2:
+      #   width: 1/2
+      #   fields:
+      #     footer
+      #       label: Footer
+      #       type: textarea
