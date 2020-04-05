@@ -8,7 +8,8 @@
     <p>
       <b>Featured Recipes</b>
       <ul>
-      <?php foreach($page->featured_recipes()->toPages() as $recipe): ?>
+      <?php foreach($page->featured_recipes()->split() as $recipeName): ?>
+        <?php $recipe = $site->find($recipeName); ?>
         <li><a href="<?= $recipe->url(); ?>"><?= $recipe->author(); ?>, <?= $recipe->title(); ?></a></li>
       <?php endforeach; ?>
     </ul>
