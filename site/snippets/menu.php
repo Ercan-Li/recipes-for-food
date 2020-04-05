@@ -3,7 +3,7 @@
     <a href="javascript:void(0);">Recipes</a>
   </div>
   <div class="menu--mobile__header">
-    <a href="/"><?= $site->title(); ?></a>
+    <a href="/"><b><?= $site->title(); ?></b></a>
   </div>
 </div>
 <div class="menu layout-wrapper__child">
@@ -11,7 +11,7 @@
     <div class="menu__toggle">
       <a href="javascript:void(0);">Recipes</a>
     </div>
-    <a href="/"><?= $site->title(); ?></a>
+    <a href="/"><b><?= $site->title(); ?></b></a>
   </div>
   <ul class="menu__contents">
     <?php foreach ($site->index()->template('recipe')->listed() as $recipe): ?>
