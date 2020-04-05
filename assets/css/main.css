@@ -94,7 +94,7 @@ a:hover {
   display: none;
 }
 
-.menu__header, .menu__footer, .menu__item {
+.menu__header, .menu__footer, .menu__item, .menu--mobile {
   width: 100%;
   background-color: #fff;
 }
@@ -249,10 +249,12 @@ a:hover {
   .layout-wrapper {
     display: flex;
     flex-direction: column;
+    height: initial;
   }
 
   .layout-wrapper__child {
     position: initial;
+    height: initial;
   }
 
   .menu {
