@@ -3,6 +3,8 @@
 
 <div class="content layout-wrapper__child">
   <div class="text">
+    <p id="print"><a href="#" onclick="print()">Print</a></p>
+    <p><b><?= $page->author(); ?>, <em><?= $page->title(); ?></em></b></p>
     <?= $page->main_content()->kt(); ?>
   </div>
 </div>

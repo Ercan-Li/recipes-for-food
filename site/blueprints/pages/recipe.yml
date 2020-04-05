@@ -1,0 +1,34 @@
+title: Recipe
+icon: template
+
+num: zero
+
+tabs:
+  main:
+    label: Main
+    icon: text
+    columns:
+      metadata:
+        width: 1/3
+        fields:
+          author:
+            label: Author
+            type: text
+            required: true
+          tags:
+            label: Tags
+            type: tags
+      content:
+        width: 2/3
+        fields:
+          main_content:
+            label: Recipe
+            type: textarea
+            size: large
+  uploads:
+    label: Uploads
+    icon: file
+    sections:
+      file_uploads:
+        headline: Uploads
+        type: files

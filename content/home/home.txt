@@ -1,1 +1,13 @@
 Title: Home
+
+----
+
+Main-content:
+
+**Recipes for Food** is a platform for sharing recipes that we have collected from our friends, peers, and strangers. They range from actual recipes, to more ingredients for a nap. We make no guarantees over the outcome of each recipe, so enjoy at your own risk :~).
+
+Share yours with us via (email: recipesforfoodcookbook@gmail.com text: email).
+
+----
+
+Featured-recipes: recipes/apples-under-the-blanket

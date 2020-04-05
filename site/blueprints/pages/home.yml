@@ -7,13 +7,20 @@ tabs:
     icon: text
     columns:
       main:
-        width: 1/1
+        width: 1/2
         fields:
           main_content:
             label: Content
             type: textarea
             size: large
-            width: 1/2
+      side:
+        width: 1/2
+        fields:
+          featured_recipes:
+            label: Featured Recipes
+            type: multiselect
+            options: query
+            query: site.children.template("recipes").children.template("recipe")
   uploads:
     label: Uploads
     icon: file

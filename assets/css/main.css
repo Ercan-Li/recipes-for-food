@@ -1,0 +1,284 @@
+/* CSS VARIABLES */
+:root {
+  --font-size: 1.6rem;
+  --font-size--mobile: 1.4rem;
+  --line-height: 1.25;
+  --line-height-em: 1.25em;
+
+  --margin: 2.5rem;
+  --margin--mobile: 1.25rem;
+
+  --font-family: 'Century Schoolbook', serif;
+
+  --menu-width: 20vw;
+  --content-max-width: 800px;
+  --border: 1px solid #000;
+}
+
+/* RESET/GLOBAL */
+*,
+*:after,
+*:before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* Now 10px = 1rem! */
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+}
+
+ul {
+  list-style-type: none;
+}
+
+strong, b {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+a {
+  color: currentColor;
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* LAYOUT */
+.layout-wrapper {
+  position: relative;
+  height: 100vh;
+}
+
+.layout-wrapper__child {
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  overflow: scroll;
+  background-color: #fff;
+}
+
+/* MENU */
+.menu {
+  border-right: var(--border);
+  width: var(--menu-width);
+  min-width: var(--menu-min-width);
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.menu--mobile {
+  display: none;
+  position: sticky;
+  top: 0;
+  border-bottom: var(--border);
+}
+
+.menu__toggle {
+  float: right;
+  display: none;
+}
+
+.menu__header, .menu__footer, .menu__item {
+  width: 100%;
+  background-color: #fff;
+}
+
+.menu__header, .menu__footer, .menu__item__link, .menu--mobile {
+  display: block;
+  padding: var(--margin);
+}
+
+.menu__header {
+  border-bottom: var(--border);
+  position: sticky;
+  top: 0;
+}
+
+.menu__item {
+  border-top: var(--border);
+}
+
+.menu__item:first-child {
+  border-top: initial;
+}
+
+.menu__item__link.active, .menu__item__link:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+.menu__footer {
+  border-top: var(--border);
+  position: sticky;
+  bottom: 0;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.menu__footer__item {
+  margin-left: var(--margin);
+}
+.menu__footer__item:first-child {
+  margin-left: initial;
+}
+
+.menu a, .menu--mobile a {
+  text-decoration: none;
+}
+
+/* CONTENT */
+.content {
+  width: calc(100vw - var(--menu-width));
+  right: 0;
+  padding: var(--margin);
+}
+
+#print {
+  float: right;
+  margin-left: var(--margin);
+}
+
+/* KirbyText */
+.text {
+  max-width: var(--content-max-width);
+}
+
+.text p,
+.text figure,
+.text ul,
+.text ol {
+  margin-bottom: 1em;
+}
+
+.text li, .text li p {
+  margin-left: 1em;
+  text-indent: -1em;
+}
+
+.text hr {
+  display: none;
+}
+
+.text .footnotes, .text sup {
+  font-size: calc(var(--font-size) * var(--font-size-s));
+}
+
+.text blockquote {
+  padding-left: 4em;
+  padding-right: 4em;
+}
+
+.text h1 {
+  font-size: calc(var(--font-size) * var(--font-size-xl));
+  font-weight: 500;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  font-family: var(--font-family);
+  line-height: 1;
+}
+
+.text h2 {
+  font-size: calc(var(--font-size) * var(--font-size-l));
+  font-weight: 500;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  font-family: var(--font-family);
+  line-height: 1;
+}
+
+.text > *:first-child {
+  margin-top: 0;
+}
+
+.text a {
+  /* text-decoration: underline; */
+}
+
+.text img {
+  display: block;
+  width: 100%;
+}
+
+@media screen and (max-width: 1333px) {
+  :root {
+    --menu-width: 30vw;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  :root {
+    --menu-width: 30vw;
+  }
+}
+
+@media screen and (max-width: 728px) {
+  :root {
+    --menu-width: 30vw;
+    --font-size: var(--font-size--mobile);
+    --margin: var(--margin--mobile);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --menu-width: 30vw;
+    --font-size: var(--font-size--mobile);
+    --margin: var(--margin--mobile);
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .layout-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .layout-wrapper__child {
+    position: initial;
+  }
+
+  .menu {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    border-right: initial;
+  }
+
+  .menu.show {
+    display: flex;
+  }
+
+  .menu__toggle {
+    display: initial;
+  }
+
+  .menu--mobile {
+    display: initial;
+  }
+
+  .content {
+    width: 100%;
+  }
+}
