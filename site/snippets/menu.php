@@ -16,15 +16,14 @@
   <ul class="menu__contents">
     <?php foreach ($site->index()->template('recipe')->listed() as $recipe): ?>
       <li class="menu__item">
-        <?php
-          $active = '';
-          if ($page->slug() == $recipe->slug()) {
-            $active = 'active';
-          }
-        ?>
-        <a class="menu__item__link <?= $active; ?>" href="<?= $recipe->url(); ?>#active" id="<?= $active; ?>">
-          <p><b><?= $recipe->title(); ?></b></p>
-          <p><?= $recipe->author(); ?></p>
+        <?php if ($page->slug() == $recipe->slug()): ?>
+          <a class="anchor" id="active"></a>
+          <a class="menu__item__link active" href="<?= $recipe->url(); ?>#active">
+        <?php else: ?>
+          <a class="menu__item__link" href="<?= $recipe->url(); ?>#active">
+        <?php endif; ?>
+            <p><b><?= $recipe->title(); ?></b></p>
+            <p><?= $recipe->author(); ?></p>
         </a>
       </li>
     <?php endforeach; ?>

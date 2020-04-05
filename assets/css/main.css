@@ -123,6 +123,13 @@ a:hover {
   background-color: #000;
 }
 
+.menu__item .anchor {
+  display: block;
+  position: relative;
+  top: -250px;
+  visibility: hidden;
+}
+
 .menu__footer {
   border-top: var(--border);
   position: sticky;
